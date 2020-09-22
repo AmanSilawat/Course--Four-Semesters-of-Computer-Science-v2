@@ -9,10 +9,20 @@ const preorderTraverse = (node, array) => {
 
 const inorderTraverse = (node, array) => {
     // fill this out
+    if (!node) return array;
+    array = inorderTraverse(node.left, array);
+    array.push(node.value);
+    array = inorderTraverse(node.right, array);
+    return array;
 };
 
 const postorderTraverse = (node, array) => {
     // fill this out
+    if (!node) return array;
+    array = postorderTraverse(node.left, array);
+    array = postorderTraverse(node.right, array);
+    array.push(node.value);
+    return array;
 };
 
 // unit tests
