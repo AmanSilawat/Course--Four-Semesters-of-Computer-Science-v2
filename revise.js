@@ -86,7 +86,6 @@ BFS, DFS(Recursive & Iterative), Dijkstra, Greedy, & A* Algorithms. These algori
 Pathfinding algorithms address the problem of finding a path from a source to a destination avoiding obstacles and minimizing the costs (time, distance, risks, fuel, price, etc.). This is a common programming challenge. Mainly known from navigation and games, we will find that the core algorithms apply to a huge range of problems.
  */
 
-
 /*
 
 *Graphs--------------------<<<
@@ -176,4 +175,87 @@ Graph Traversal
 
 
 
-*/ 
+*/
+
+/*
+
+*Tries--------------------<<<
+tries == retrieve (data)
+Trie is a tree-based data structure, which is used for efficient retrieval of a key in a large data-set of strings. Unlike a binary search tree, where node in the tree stores the key associated with that node
+
+                 e ----> e
+                /
+     / t --->  r 
+    /           \
+   ⬤             i ----> e
+    \\  a ----->  i ----> a ----> o
+     \  s ----->  t ----> r ----> i ----> n ----> g
+
+*/
+
+
+//* Searching for an Element in an Array --------------------<<<
+
+function linearSearch(id, arr) {
+    for (let i = 0; i < arr.length; i++) {
+        if (id === arr[i].id) {
+            return arr[i];
+        }
+    }
+    return void 0;
+}
+
+function binarySearch(id, array) {
+    let min = 0;
+    let max = array.length - 1;
+    let index;
+    let element;
+    while (min <= max) {
+        index = Math.floor((min + max) / 2);
+        element = array[index];
+
+        if (element.id < id) {
+            min = index + 1;
+        } else if (element.id > id) {
+            max = index - 1;
+        } else {
+            return element;
+        }
+    }
+
+    return void 0;
+}
+
+var resLinear = linearSearch(11, [
+    { id: 1, name: 'Sam' },
+    { id: 11, name: 'Sarah' },
+    { id: 21, name: 'John' },
+    { id: 10, name: 'Burke' },
+    { id: 13, name: 'Simona' },
+    { id: 31, name: 'Asim' },
+    { id: 6, name: 'Niki' },
+    { id: 19, name: 'Aysegul' },
+    { id: 25, name: 'Kyle' },
+    { id: 18, name: 'Jem' },
+    { id: 2, name: 'Marc' },
+    { id: 51, name: 'Chris' },
+    { id: 14, name: 'Ben' },
+]);
+resLinear; // {id: 11, name: "Sarah"}
+
+var resBinary = binarySearch(6, [
+    { id: 1, name: 'Sam' },
+    { id: 3, name: 'Sarah' },
+    { id: 5, name: 'John' },
+    { id: 6, name: 'Burke' },
+    { id: 10, name: 'Simona' },
+    { id: 12, name: 'Asim' },
+    { id: 13, name: 'Niki' },
+    { id: 15, name: 'Aysegul' },
+    { id: 17, name: 'Kyle' },
+    { id: 18, name: 'Jem' },
+    { id: 19, name: 'Marc' },
+    { id: 21, name: 'Chris' },
+    { id: 24, name: 'Ben' },
+]);
+resBinary; // {id: 6, name: "Burke"}
