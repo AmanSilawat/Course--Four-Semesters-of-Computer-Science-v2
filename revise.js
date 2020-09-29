@@ -85,3 +85,95 @@ BFS, DFS(Recursive & Iterative), Dijkstra, Greedy, & A* Algorithms. These algori
 
 Pathfinding algorithms address the problem of finding a path from a source to a destination avoiding obstacles and minimizing the costs (time, distance, risks, fuel, price, etc.). This is a common programming challenge. Mainly known from navigation and games, we will find that the core algorithms apply to a huge range of problems.
  */
+
+
+/*
+
+*Graphs--------------------<<<
+
+A Graph is a non-linear data structure consisting of nodes and edges. The nodes are sometimes also referred to as vertices and the edges are lines
+
+   b------d
+ / |     | \
+a  |     |  f
+ \ |     | /
+  c------e
+
+g: orderd pair
+v: set of vertices (Object)
+e: set of edges (Relations)
+
+g = (v, e)
+
+v= {a,b,c,d,e,f}
+e= {
+    (a, b),
+    (a, c),
+    (b, c),
+    (d, b),
+    (c, e),
+    (d, e),
+    (d, f),
+    (e, f)
+}
+
+
+*orderd pair*
+    (a, b) != (b, a)    if (a != b)
+
+*unorderd pair*
+    (a, b) = (b, a)
+
+
+each node have some identification (not any specific order)
+   b------d
+ / |     | \
+a  |     |  f
+ \ |     | /
+  c------e
+
+a = v1
+b = v2
+c = v3
+e ...
+
+
+
+*two type of graph*
+Directed      a---->b  (link, path, this dircetion is one way) a: origin, b: destination
+Undirected    a-----b  (direction not fixed)
+
+
+
+*social network graph is undirected graph (Facebook)*
+how work in social graph
+for ex: friend suggestions
+
+
+*Interlinked directed graph*
+pageA -----> pageB ------> pageC, pageD, pageZ
+
+
+search engin using web-crawling
+is
+Graph Traversal
+
+
+
+
+*Weighted vs Unweighed*
+
+*Weighted*
+: labeled some values (200km) on edge
+: Intercity road network is weighted and directed graph 
+
+*Unweighted*
+: unit a weighted graph with all edges having (weight = 1) :all edges is same
+: social graph is unweighted graph.
+: world wild web is directed or unweighted graph
+
+
+
+
+
+*/ 
