@@ -259,3 +259,17 @@ var resBinary = binarySearch(6, [
     { id: 24, name: 'Ben' },
 ]);
 resBinary; // {id: 6, name: "Burke"}
+
+
+/*
+
+*Heap Sort--------------------<<<
+
+-A binary heap is an array;
+-parent is greater than the children.
+
+https://medium.com/basecs/heapify-all-the-things-with-heap-sort-55ee1c93af82
+
+Before we dive into heap sort, let’s make sure that we have heaps straight in our heads. We might remember that a heap is really nothing more than a binary tree with some additional rules that it has to follow: first, it must always have a heap structure, where all the levels of the binary tree are filled up, from left to right, and second, it must either be ordered as a max heap or a min heap. For the purposes of heap sort, we’ll be dealing exclusively with max heaps, where every parent node (including the root) is greater than or equal to the value of its children nodes.
+
+*/
